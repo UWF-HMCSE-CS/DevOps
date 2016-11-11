@@ -169,7 +169,6 @@ node('docker_box')
                 try
                 {
                     // Running PHP tests
-                    //sh "bash /home/ec2-user/workspace/DevOps/tests/stage/createSTAGE.sh"
                     sh "bash /home/ec2-user/workspace/DevOps/tests/push/push.sh ${repo}"
                 }
                 catch(e)
