@@ -6,8 +6,6 @@ RUN echo "mysql-server mysql-server/root_password_again password chocolate" | de
 
 RUN apt-get update && apt-get -y upgrade && apt-get -y install mysql-server && apt-get -y install nano vim
 
-#ADD /home/ec2-user/Separated/database /pipeline
-
 CMD bash /pipeline/setDB.sh
 
 EXPOSE 3306
