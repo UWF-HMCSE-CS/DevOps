@@ -36,7 +36,7 @@ node('docker_box')
     {
 
         // Updating tester repo
-        dir('/home/ec2-user/workspace/DevOps-Pipeline')
+        dir('/home/ec2-user/workspace/DevOps')
         {
             try
             {
@@ -72,7 +72,7 @@ node('docker_box')
         }
 
         // Building Gadget Docker image
-        sh "docker build -t ${repo} /home/ec2-user/workspace/DevOps-Pipeline/tests/phpcs/Gadget"
+        sh "docker build -t ${repo} /home/ec2-user/workspace/DevOps/tests/phpcs/Gadget"
 
         try
         {
@@ -86,7 +86,7 @@ node('docker_box')
 
 
         // Building phpcs Index Docker image
-        sh "docker build -t ${repo} /home/ec2-user/workspace/DevOps-Pipeline/tests/phpcs/Index"
+        sh "docker build -t ${repo} /home/ec2-user/workspace/DevOps/tests/phpcs/Index"
 
         try
         {
@@ -100,7 +100,7 @@ node('docker_box')
 
 
         // Building phpcs Tester Docker image
-        sh "docker build -t ${repo} /home/ec2-user/workspace/DevOps-Pipeline/tests/phpcs/Tester"
+        sh "docker build -t ${repo} /home/ec2-user/workspace/DevOps/tests/phpcs/Tester"
 
         try
         {
@@ -118,7 +118,7 @@ node('docker_box')
             // Starting Unit Tests
             stage 'Unit Tests'    // Building localphpunit Docker image
 
-            sh "docker build -t ${repo} /home/ec2-user/workspace/DevOps-Pipeline/tests/localphpunit"
+            sh "docker build -t ${repo} /home/ec2-user/workspace/DevOps/tests/localphpunit"
 
             try
             {
@@ -140,7 +140,7 @@ node('docker_box')
             {
 
                 // Building phpunit integration Docker image
-                sh "docker build -t ${repo} /home/ec2-user/workspace/DevOps-Pipeline/tests/phpunit"
+                sh "docker build -t ${repo} /home/ec2-user/workspace/DevOps/tests/phpunit"
 
                 try
                 {
@@ -169,8 +169,8 @@ node('docker_box')
                 try
                 {
                     // Running PHP tests
-                    //sh "bash /home/ec2-user/workspace/DevOps-Pipeline/tests/stage/createSTAGE.sh"
-                    sh "bash /home/ec2-user/workspace/DevOps-Pipeline/tests/push/push.sh ${repo}"
+                    //sh "bash /home/ec2-user/workspace/DevOps/tests/stage/createSTAGE.sh"
+                    sh "bash /home/ec2-user/workspace/DevOps/tests/push/push.sh ${repo}"
                 }
                 catch(e)
                 {
@@ -209,10 +209,10 @@ node('docker_box')
                 stage 'BackUp'
                 dir("/home/ec2-user/workspace/jenkins_pipeline/")
                 {
-                    sh "sudo cp -r ${repo}/ /home/ec2-user/workspace/DevOps-Pipeline/tests/stage/backUps/"
+                    sh "sudo cp -r ${repo}/ /home/ec2-user/workspace/DevOps/tests/stage/backUps/"
                 }
 
-                dir("/home/ec2-user/workspace/DevOps-Pipeline/")
+                dir("/home/ec2-user/workspace/DevOps/")
                 {
                     sh "sudo -u ec2-user git push"
                 }
