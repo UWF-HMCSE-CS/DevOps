@@ -229,7 +229,7 @@ node('docker_box')
         {
             // Removing the repo after the tests are complete
             sh "sudo rm -rf /home/ec2-user/workspace/jenkins_pipeline/${repo}"
-            sh "sudo rm -rf /home/ec2-userx/workspace/jenkins_pipeline/${repo}\\@tmp"
+            sh "sudo rm -rf /home/ec2-user/workspace/jenkins_pipeline/${repo}\\@tmp"
             //sh "sudo rm -rf /home/ec2-user/workspace/*\\@*"
         }
         catch(e)
