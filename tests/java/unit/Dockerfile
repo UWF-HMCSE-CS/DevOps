@@ -7,7 +7,7 @@ RUN bash /maven/setup_maven.sh
 
 WORKDIR /maven/
 
-CMD echo "finished"
+#CMD echo "finished"
 
 #CMD bash unit-test.sh
 
