@@ -7,7 +7,9 @@ RUN bash /maven/setup_maven.sh
 
 WORKDIR /maven/
 
-CMD bash unit-test.sh
+CMD echo "finished"
+
+#CMD bash unit-test.sh
 
 #WORKDIR /home/ec2-user/workspace/
 
