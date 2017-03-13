@@ -21,4 +21,3 @@ WORKDIR /maven/
 #RUN mvn package
 #WORKDIR /project/target/
 #CMD java -cp project-1.0-SNAPSHOT.jar com.company.project.App
-
