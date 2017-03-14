@@ -1,3 +1,3 @@
 #! /bin/bash
 
-(cd /maven/MediumFX/; mvn -Dtest=intest.* test)
+(cd /cdep/MediumFX/; mvn -Dtest=intest.* test)
