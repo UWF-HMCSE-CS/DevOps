@@ -1,3 +1,3 @@
 #! /bin/bash
 
-cd /cdep/MediumFX/; mvn compile
+cd /cdep/; mvn compile

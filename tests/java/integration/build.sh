@@ -1,3 +1,3 @@
 #! /bin/bash
 
-(cd /cdep/MediumFX/; mvn -Dtest=intest.* test)
+(cd /cdep/; mvn -Dtest=intest.* test)
