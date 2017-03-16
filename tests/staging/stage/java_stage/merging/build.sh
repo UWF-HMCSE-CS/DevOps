@@ -4,4 +4,4 @@
 
 (cd /pipeline/; git checkout master)
 (cd /pipeline/; git merge $1)
-(cd /pipeline/; git push $2 master)
+(cd /pipeline/; git push origin master)
