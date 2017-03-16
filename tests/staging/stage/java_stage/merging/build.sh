@@ -1,3 +1,3 @@
 #! /bin/bash
 
-(cd /pipeline/; mvn package)
+(cd /pipeline/; mvn clean compile assembly:single)
