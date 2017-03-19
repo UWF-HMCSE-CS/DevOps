@@ -1,3 +1,3 @@
 #! /bin/bash
 
-(cd /pipeline/tests; phpunit /pipeline/tests/localTester.php)
+(cd /cdep/tests; phpunit /cdep/tests/localTester.php)
