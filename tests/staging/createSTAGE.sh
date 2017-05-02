@@ -1,7 +1,7 @@
 #! /bin/bash
 
 
-sudo docker build -t stage /home/ec2-user/workspace/DevOps/tests/stage/
+sudo docker build -t stage /home/ec2-user/workspace/DevOps/tests/staging/
 
 sudo docker stop pipeline_stage
 

@@ -10,8 +10,8 @@ service apache2 start
 cp /pipeline/index.html /var/www/html/
 
 
-# while(true)
-# do
-#     sleep 10
-#     ls /var/www/html/
-# done
+ while(true)
+ do
+     sleep 10
+     ls /var/www/html/
+ done
